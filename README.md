@@ -113,7 +113,9 @@ Add this to the top of your top level component or each smaller.
 import './TicketingSystem.css';
 ```
 
+See a working example here:
 
+https://codesandbox.io/p/sandbox/react-ticket-example-2nfppz
 
 
 
