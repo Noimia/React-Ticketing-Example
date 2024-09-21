@@ -1,0 +1,228 @@
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #0A192F; /* Dark background */
+  color: #ffffff; /* Light text color */
+  margin: 0;
+  padding: 0;
+}
+
+/* Modal Customization */
+.modal-content {
+  background-color: #1A202C; /* Dark background for modal */
+  color: #FFFFFF;
+}
+
+.modal-header, .modal-footer {
+  border-color: #2D3748; /* Slightly lighter border */
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  color: #FF007F; /* Pink title color */
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.ticket-type-btn {
+  width: 300px;
+  height: 300px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #FFFFFF;
+  background-color: #FF007F; /* Pink button */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ticket-type-btn:hover {
+  background-color: #0366d6; /* Hover effect to GitHub's blue */
+  transform: scale(1.05);
+}
+
+.ticket-type-btn:focus {
+  outline: none;
+}
+
+/* Form Styles */
+form {
+  margin-top: 20px;
+}
+
+.form-control {
+  background-color: #2D3748; /* Darker input field */
+  color: #ffffff;
+  border: 1px solid #4A5568; /* Light border */
+  padding: 10px;
+}
+
+.form-control:focus {
+  background-color: #2C5282;
+  color: #ffffff;
+  outline: none;
+}
+
+.form-label {
+  color: #A0AEC0; /* Lighter label text */
+  margin-bottom: 8px;
+}
+
+.form-control[readonly] {
+  background-color: #4A5568; /* Darker background for read-only fields */
+}
+
+/* Button Styles */
+button {
+  background-color: #FF007F;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #E53E3E;
+}
+
+button:disabled {
+  background-color: #A0AEC0;
+  cursor: not-allowed;
+}
+
+/* Confirmation Section */
+.confirmation {
+  margin-top: 20px;
+}
+
+.confirmation h3 {
+  color: #FF007F;
+}
+
+.confirmation p {
+  color: #A0AEC0;
+}
+
+/* ViewTicket */
+.view-ticket {
+  margin: 20px;
+}
+
+.view-ticket .list-group-item {
+  background-color: #1A202C;
+  color: white;
+  border: none;
+  padding: 15px;
+}
+
+.view-ticket .list-group-item span {
+  font-size: 1rem;
+}
+
+.comment {
+  margin: 10px 0;
+}
+
+.comment.user {
+  background-color: #2B6CB0;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+.comment.admin {
+  background-color: #718096;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+/* Comment Input */
+textarea.form-control {
+  resize: none;
+}
+
+.comment-section {
+  background-color: #2D3748;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.comment-section .comment {
+  margin-bottom: 10px;
+}
+
+.comment-section .comment.user {
+  text-align: right;
+}
+
+/* Project Link Styling */
+.project-link {
+  background-color: #1A202C;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.project-link:hover {
+  transform: translateY(-5px);
+}
+
+.project-link h3 {
+  color: #FF007F;
+}
+
+.project-link p {
+  color: #A0AEC0;
+}
+
+.github-link {
+  display: block;
+  margin-top: 20px;
+  background-color: #FF007F;
+  padding: 10px 20px;
+  color: #FFFFFF;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.github-link:hover {
+  background-color: #0366d6; /* GitHub blue */
+  transform: translateY(-3px);
+}
+
+.github-link:visited {
+  background-color: #4A5568; /* Gray color when visited */
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #2D3748;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #FF007F;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #E53E3E;
+}
