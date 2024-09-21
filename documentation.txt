@@ -1,0 +1,101 @@
+Ticketing System Documentation
+Components:
+TicketModal
+ViewTicket
+TicketForm
+1. TicketModal
+Purpose:
+TicketModal is the main component responsible for rendering a modal where users can select a ticket type, fill out a form to submit a ticket, and view the submitted ticket. It handles all state management for ticket submission and viewing.
+
+Props:
+show: (boolean) Determines whether the modal is visible.
+onHide: (function) Callback function to close the modal.
+State:
+ticketType: (string) Stores the selected ticket type (e.g., "I Have an Issue" or "I Have a Question").
+ticketData: (object) Contains the ticket information entered by the user, including:
+name: (string) The user's name.
+email: (string) The user's email address.
+requestor: (string) The default requestor ("Jeremiah Mountain").
+requestTitle: (string) The title of the request.
+description: (string) A description of the issue or question.
+ticketTypeLabel: (string) The label for the selected ticket type.
+validated: (boolean) Tracks whether the form has been validated.
+submitted: (boolean) Tracks whether the form has been submitted.
+requestID: (string) Stores the generated request ID.
+viewTicket: (boolean) Determines whether to show the ticket details after submission.
+Functions:
+handleTicketTypeSelect(type): Sets the ticket type (either "issue" or "question") and resets submission-related states.
+handleInputChange(e): Handles user input in the form and updates the corresponding ticketData state.
+handleFormSubmit(e): Handles form submission, validates the form, and generates a request ID if the form is valid.
+handleNewTicket(): Resets the modal to allow the user to submit a new ticket.
+handleViewTicket(): Switches the modal to display the ticket details after submission.
+handleModalClose(): Resets the modal state when it is closed (returns to ticket type selection) and triggers the onHide() callback.
+Flow:
+User selects a ticket type.
+The form is displayed for the selected ticket type.
+The user fills out the form and submits it.
+A confirmation message is shown with a generated request ID.
+The user can either submit a new ticket or view the submitted ticket details.
+2. ViewTicket
+Purpose:
+ViewTicket is responsible for displaying the details of a submitted ticket, including the requestor's name, email, request title, description, and ticket type.
+
+Props:
+requestID: (string) The generated request ID for the submitted ticket.
+ticketData: (object) An object containing the ticket details, including:
+name: (string) The user's name.
+email: (string) The user's email address.
+requestTitle: (string) The title of the request.
+description: (string) A description of the issue or question.
+ticketTypeLabel: (string) The label for the selected ticket type.
+Structure:
+ViewTicket renders the following fields:
+
+Request ID: The unique ID generated for the submitted ticket.
+Requestor: The name of the person who submitted the ticket.
+Email: The email address of the requestor.
+Request Title: The title or summary of the ticket.
+Description: A detailed description of the issue or question.
+Ticket Type: Displays whether the ticket is an "issue" or a "question".
+Flow:
+This component is displayed after a ticket has been submitted. It pulls data from the ticketData prop and formats it into a read-only view.
+It is rendered inside the TicketModal component when the user opts to view the submitted ticket.
+3. TicketForm
+Purpose:
+TicketForm handles the user input for submitting a ticket. It provides form fields for name, email, request title, description, and more. It is a central part of the TicketModal component and is rendered after the user selects a ticket type.
+
+Props:
+ticketData: (object) An object containing the form data, which is passed from TicketModal.
+onInputChange: (function) A callback function passed from the parent component to handle input changes.
+onSubmit: (function) A callback function to handle form submission and validation.
+Fields:
+Name: A required text field where the user enters their name.
+Email: A required email field where the user enters their email address.
+Request Title: A required text field where the user enters a brief title or summary of the issue.
+Description: A required textarea where the user describes the issue or question in detail.
+Flow:
+The user selects a ticket type (from TicketModal), and the form is rendered.
+The user fills in the details and submits the form.
+The form submission is validated and processed by the onSubmit callback provided by the parent component (TicketModal).
+General Flow:
+The user opens the modal and selects a ticket type.
+Based on the selection, the user fills out the ticket form and submits it.
+After successful submission, a confirmation message is displayed along with the request ID.
+The user can either submit a new ticket or view the submitted ticket details in the read-only view.
+Key Features:
+Validation: The form ensures all required fields (name, email, request title, description) are filled in before allowing submission.
+Dynamic State: The ticketType, ticketData, and submitted states dynamically control the content displayed in the modal.
+View Submitted Ticket: After submitting a ticket, the user can view the full ticket details, including a generated request ID and all the form data they entered.
+Example Workflow:
+Select Ticket Type:
+
+User selects either "I Have an Issue" or "I Have a Question".
+The corresponding form is displayed.
+Fill Out Ticket Form:
+
+The user enters their name, email, request title, and description.
+They submit the form, which generates a unique request ID.
+Submit and View Ticket:
+
+After submission, the user can view the ticket with all entered details and the request ID.
+The form data is read-only, allowing the user to review their submitted ticket.
