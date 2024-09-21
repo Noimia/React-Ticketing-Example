@@ -20,9 +20,11 @@ cd my-app
 Installation Steps:
 Copy the Component Files:
 
+Create a components folder inside src if it doesn't exist.
+
 Copy the TicketModal.js, ViewTicket.js, and TicketForm.js files into your React app's src/components directory.
 
-Create a components folder inside src if it doesn't exist.
+
 
 Install Required Dependencies: The components rely on React Bootstrap for styling and modal functionality. You need to install react-bootstrap and bootstrap:
 
