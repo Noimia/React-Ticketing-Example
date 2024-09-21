@@ -101,3 +101,19 @@ onInputChange: Function to handle input changes.
 onSubmit: Function to handle form submission.
 Customization:
 Feel free to modify the components as per your requirements. You can adjust the form fields, validation rules, and modal styles by editing the corresponding component files.
+
+
+Optional CSS Styles:
+
+Add this to the top of your top level component or each smaller.
+
+```JavaScript
+import './TicketingSystem.css';
+```
+
+
+
+
+
+
+
