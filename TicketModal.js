@@ -26,7 +26,7 @@ const TicketModal = ({ show, onHide }) => {
     setTicketData({
       name: "",
       email: "",
-      requestor: "Jeremiah Mountain",
+      requestor: "",
       requestTitle: "",
       description: "",
     }); // Reset the form fields
